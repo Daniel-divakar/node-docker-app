@@ -15,6 +15,10 @@ var gameIdCounter = 1;
 
 app.use(express.static(__dirname + '/public'));
 
+app.get("/", (_req, res) => {
+  res.status(200).send("OK");
+});
+
 http.listen(port, function(){
   console.log('listening on *:' + port);
 });
